@@ -1,0 +1,11 @@
+{
+  "name": "included-project",
+  "version": "1.0.0",
+  "private": true,
+  "title": "Common tools",
+  "description": "Common tools",
+  "type": "module",
+  "devDependencies": {
+    "normalize-url": "^8.0.1"
+  }
+}

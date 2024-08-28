@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true,
+    "allowArbitraryExtensions": true,
+    "baseUrl": ".",
+    "composite": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2016", "dom"],
+    "module": "esnext",
+    "moduleResolution": "nodenext",
+    "outDir": "./build",
+    "rootDir": "./",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2018"
+  },
+  "include": ["**/*.ts", "tsconfig.json"],
+  "exclude": ["build", "node_modules"]
+}

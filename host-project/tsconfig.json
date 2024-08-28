@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "allowArbitraryExtensions": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "outDir": "./build",
+    "paths": {
+      "@included-project/*": ["../included-project/src/*"],
+      "@host/*": ["./src/*"]
+    },
+    "plugins": [
+      { "transform": "typescript-transform-paths" },
+      { "transform": "typescript-transform-paths", "afterDeclarations": true }
+    ],
+    "resolveJsonModule": true,
+    "rootDir": "./",
+    "target": "es2018"
+  },
+  "include": ["**/*.ts", "package.json", "tsconfig.json"],
+  "exclude": ["dist", "build", "./node_modules"],
+  "references": [{ "path": "../included-project" }]
+}
