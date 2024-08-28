@@ -4,7 +4,7 @@ Demonstration of an error occuring when using jest + ts-test and including files
 
 Do a `npm install` in every dir and then in "host-project" execute a `npm run test` (see below):
 
-
+**ATTENTION**! There is a solution! See at the bottom :) Thanks https://github.com/ahnpnl!
 
 ---
 
@@ -115,3 +115,14 @@ Why is `emitSkipped = true` for the node_module?
 
 How can I get this setup to work in jest?
 
+# Solution
+
+Use the following in `jest.config.ts`:
+
+```js
+ transform: {
+    '^.+\\.(ts|js)$': ['ts-jest', { isolatedModules: true }]
+  },
+```
+
+See [isolatedModules](https://kulshekhar.github.io/ts-jest/docs/getting-started/options/isolatedModules) and [jest.config.working.ts](https://github.com/thenoseman/ts-jest-include-error-repro/blob/main/host-project/jest.config.working.ts)
